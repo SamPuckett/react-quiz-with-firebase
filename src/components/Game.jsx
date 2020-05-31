@@ -1,34 +1,20 @@
 import React, { useEffect, useState } from 'react';
 
 import Question from './Question';
+import { loadQuestions } from '../helpers/QuestionsHelper';
 
 const Game = () => {
   const [questions, setQuestions] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
-      const url =
-        'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple';
       try {
-        const res = await fetch(url);
-        const { results } = await res.json();
-        const questions = results.map((loadedQuestion) => {
-          const formattedQuestion = {
-            question: loadedQuestion.question,
-            answerChoices: [...loadedQuestion.incorrect_answers],
-            // answer:
-          };
-          formattedQuestion.answer = Math.floor(Math.random() * 4);
-          formattedQuestion.answerChoices.splice(
-            formattedQuestion.answer,
-            0,
-            loadedQuestion.correct_answer
-          );
-          return formattedQuestion;
-        });
+        const questions = await loadQuestions();
+        console.log(questions);
         setQuestions(questions);
-        setCurrentQuestion(questions[0]);
       } catch (err) {
         console.error(err);
       }
@@ -36,8 +22,34 @@ const Game = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    if (questions !== null && loading === true) {
+      changeQuestion();
+    }
+  }, [questions]);
+
+  const changeQuestion = (bonus = 0) => {
+    // Get a random index of a question
+    const randomQuestionIndex = Math.floor(Math.random() * questions.length);
+    // Set the current question to the question at that random index
+    const currentQuestion = questions[randomQuestionIndex];
+    // Remove question from the questions going foward
+    const remainingQuestions = [...questions];
+    remainingQuestions.splice(randomQuestionIndex, 1);
+    // Update the state to reflect these changes
+    setQuestions(remainingQuestions);
+    setCurrentQuestion(currentQuestion);
+    setLoading(false);
+    setScore(score + bonus);
+  };
+
   return (
-    <div>{currentQuestion && <Question question={currentQuestion} />}</div>
+    <>
+      {loading && <div id='loader'></div>}
+      {!loading && currentQuestion && (
+        <Question changeQuestion={changeQuestion} question={currentQuestion} />
+      )}
+    </>
   );
 };
 
