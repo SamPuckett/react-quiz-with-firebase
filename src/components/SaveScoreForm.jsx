@@ -27,7 +27,7 @@ const SaveScoreForm = ({ score = 0, scoreSaved }) => {
   };
 
   return (
-    <>
+    <div className='save-score-container'>
       <h1 className='save-score-form-text'>SCORE: {score}</h1>
       <form onSubmit={saveHighScore}>
         <input
@@ -45,7 +45,7 @@ const SaveScoreForm = ({ score = 0, scoreSaved }) => {
       <Link to='/' className='btn'>
         GO HOME
       </Link>
-    </>
+    </div>
   );
 };
 

@@ -50,6 +50,31 @@ h2 {
   font-style: normal;
 }
 
+.title {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 2%;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.sam-watermark {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  right: 2%;
+  top: 2%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
 /* HOME PAGE */
 
 .home-container {
@@ -313,6 +338,7 @@ input::placeholder {
 
 .hud-main-text {
   text-align: center;
+  text-shadow: none;
 }
 
 #progressBar {
@@ -347,18 +373,7 @@ input::placeholder {
   }
 }
 
-/* HIGH SCORES */
-
-#highScoresList {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 4rem;
-}
-
-.high-score {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-}
+/* SAVE SCORE PAGE */
 
 .save-score-form-text {
   color: rgba(0, 0, 0, 0);
@@ -366,4 +381,83 @@ input::placeholder {
   text-stroke: 4px var(--white);
   text-shadow: none;
   margin: 0 0 5rem 0;
+}
+
+.save-score-container {
+  background-position: 50%;
+  /* background-image: url(./images/1.png); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--red1);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* HIGH SCORE PAGE */
+
+.high-scores-container {
+  background-position: 50%;
+  /* background-image: url(./images/1.png); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--red1);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#highScoresList {
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  width: 90%;
+}
+
+.high-score {
+  font-size: 8rem;
+  line-height: 0.8;
+  margin: 0 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.high-score-place {
+  font-family: futura-pt-bold, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--white);
+  margin: 0 1rem 0 0;
+}
+
+.high-score-name {
+  font-family: futura-pt-bold, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--white);
+  margin: 0 1rem 0 0;
+}
+
+.high-score-score {
+  font-family: futura-pt-bold, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--white);
+  margin: 0 0 0 0;
 }

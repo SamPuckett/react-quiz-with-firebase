@@ -4,6 +4,8 @@ import { useHistory } from 'react-router-dom';
 import Question from './Question';
 import HUD from './HUD';
 import SaveScoreForm from './SaveScoreForm';
+import SamWatermark from './SamWatermark';
+import MVGQ from './MVGQ';
 
 import { loadQuestions } from '../helpers/QuestionsHelper';
 
@@ -66,6 +68,8 @@ const Game = () => {
 
   return (
     <div className='game-container'>
+      <MVGQ />
+      <SamWatermark />
       {loading && !done && <div id='loader'></div>}
       {!done && !loading && currentQuestion && (
         <>

@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import SamWatermark from './SamWatermark';
+import MVGQ from './MVGQ';
+
 const Home = () => {
   return (
     <div className='home-container'>
+      <MVGQ />
+      <SamWatermark />
       <div className='home-title'>
         <h1>
           MEGA VIDEO
