@@ -23,23 +23,30 @@ const Question = ({ changeQuestion, question }) => {
   };
 
   return (
-    <div>
-      <h2 dangerouslySetInnerHTML={{ __html: question.question }}></h2>
-      {question.answerChoices.map((choice, index) => (
-        <div
-          className={`choice-container ${
-            selectedAnswer === index && classToApply
-          }`}
-          key={index}
-          onClick={() => checkAnswer(index)}
-        >
-          <p className='choice-prefix'>{index + 1}</p>
-          <p
-            className='choice-text'
-            dangerouslySetInnerHTML={{ __html: choice }}
-          ></p>
-        </div>
-      ))}
+    <div className='game-top'>
+      <div className='game-choice-container'>
+        {question.answerChoices.map((choice, index) => (
+          <div
+            className={`choice-container ${
+              selectedAnswer === index && classToApply
+            }`}
+            key={index}
+            onClick={() => checkAnswer(index)}
+          >
+            <h2 className='choice-prefix'>{`0${index + 1}.`}</h2>
+            <h2
+              className='choice-text'
+              dangerouslySetInnerHTML={{ __html: choice }}
+            ></h2>
+          </div>
+        ))}
+      </div>
+      <div className='game-questions-container'>
+        <h2
+          className='game-questions'
+          dangerouslySetInnerHTML={{ __html: question.question }}
+        ></h2>
+      </div>
     </div>
   );
 };

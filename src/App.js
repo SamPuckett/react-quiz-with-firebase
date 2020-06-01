@@ -9,7 +9,7 @@ import HighScores from './components/HighScores';
 function App() {
   return (
     <Router>
-      <div className='container'>
+      <div>
         <Route exact path='/' component={Home} />
         <Route path='/game' component={Game} />
         <Route path='/highscores' component={HighScores} />

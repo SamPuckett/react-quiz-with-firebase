@@ -28,22 +28,22 @@ const SaveScoreForm = ({ score = 0, scoreSaved }) => {
 
   return (
     <>
-      <h1>Score: {score}</h1>
+      <h1 className='save-score-form-text'>SCORE: {score}</h1>
       <form onSubmit={saveHighScore}>
         <input
           type='text'
           name='username'
           id='username'
-          placeholder='cool kid 123'
+          placeholder='ENTER YOUR NAME'
           value={username}
           onChange={onUsernameChange}
         />
-        <button type='submit' className='btn' disabled={!username}>
-          Save
+        <button type='submit' className='btn-dark' disabled={!username}>
+          SAVE
         </button>
       </form>
       <Link to='/' className='btn'>
-        Go Home
+        GO HOME
       </Link>
     </>
   );

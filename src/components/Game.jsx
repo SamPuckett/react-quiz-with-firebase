@@ -65,19 +65,19 @@ const Game = () => {
   }, [questions, loading, changeQuestion]);
 
   return (
-    <>
+    <div className='game-container'>
       {loading && !done && <div id='loader'></div>}
       {!done && !loading && currentQuestion && (
         <>
-          <HUD questionNumber={questionNumber} score={score} />
           <Question
             changeQuestion={changeQuestion}
             question={currentQuestion}
           />
+          <HUD questionNumber={questionNumber} score={score} />
         </>
       )}
       {done && <SaveScoreForm score={score} scoreSaved={scoreSaved} />}
-    </>
+    </div>
   );
 };
 
