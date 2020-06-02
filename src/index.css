@@ -46,7 +46,6 @@ h2 {
   margin: 0;
   font-weight: 700;
   font-family: futura-pt-bold, sans-serif;
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -82,7 +81,7 @@ h2 {
   background-image: url(https://res.cloudinary.com/dnrbgmcm4/image/upload/v1590984175/1_rxpe4i.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: var(--red1);
+  /* background-color: var(--red1); */
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -460,4 +459,49 @@ input::placeholder {
   font-style: normal;
   color: var(--white);
   margin: 0 0 0 0;
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 601px) {
+  body {
+    background-color: var(--red1);
+  }
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: var(--black);
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .sam-watermark {
+    font-size: 1rem;
+  }
+  .home-container {
+    flex-direction: column;
+    padding: 3rem;
+    justify-content: space-between;
+    background-image: none;
+  }
+  h1 {
+    font-size: 5rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .home-title {
+    align-self: flex-start;
+    margin: 2rem 0 0 0;
+  }
+  a.btn {
+    font-size: 1.5rem;
+    padding: 1.5rem 3rem;
+  }
+  a.btn-dark {
+    font-size: 1.5rem;
+    padding: 1.5rem 3rem;
+  }
 }
