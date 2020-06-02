@@ -384,7 +384,7 @@ input::placeholder {
 
 .save-score-container {
   background-position: 50%;
-  /* background-image: url(./images/1.png); */
+  /* background-image: url(./images/); */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--red1);
@@ -472,36 +472,96 @@ input::placeholder {
 /* MOBILE */
 
 @media only screen and (max-width: 600px) {
+  /* GLOBAL STYLES */
+
   body {
-    background-color: var(--black);
+    background-color: var(--red1);
+    height: 100vh;
+    width: 100vw;
+    /* background-image: url(./images/home-mobile.png); */
   }
-  .title {
-    font-size: 1.5rem;
-  }
-  .sam-watermark {
-    font-size: 1rem;
-  }
-  .home-container {
-    flex-direction: column;
-    padding: 3rem;
-    justify-content: space-between;
-    background-image: none;
-  }
+
   h1 {
-    font-size: 5rem;
+    font-size: 5.5rem;
     white-space: nowrap;
     overflow: hidden;
+    line-height: 0.8;
   }
-  .home-title {
-    align-self: flex-start;
-    margin: 2rem 0 0 0;
-  }
+
   a.btn {
     font-size: 1.5rem;
     padding: 1.5rem 3rem;
+    box-sizing: border-box;
   }
+
   a.btn-dark {
     font-size: 1.5rem;
     padding: 1.5rem 3rem;
+    box-sizing: border-box;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    top: 1%;
+  }
+
+  .sam-watermark {
+    font-size: 1rem;
+    top: 1%;
+  }
+
+  /* HOME PAGE */
+
+  .home-container {
+    flex-direction: column;
+    padding: 3rem 3rem 0 3rem;
+    justify-content: space-between;
+    background-image: none;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .home-button-column {
+    width: 85vw;
+  }
+
+  .home-title {
+    align-self: center;
+    margin: 2rem 0 0 0;
+  }
+
+  .home-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .home-mobile-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(./images/2.png);
+    background-repeat: no-repeat;
+    background-size: 175%;
+    background-position: 50% 180%;
+    z-index: -1;
+  }
+
+  .home-mobile-box {
+    height: 70vh;
+    width: 100%;
+    background-color: var(--red2);
+    z-index: -2;
+  }
+
+  .start-game-btn {
+    align-self: flex-start;
+  }
+
+  .high-scores-btn {
+    margin-bottom: -5rem;
+    align-self: flex-end;
   }
 }

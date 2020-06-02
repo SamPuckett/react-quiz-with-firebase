@@ -17,15 +17,16 @@ const Home = () => {
         </h1>
       </div>
       <div className='home-button-column'>
-        <div className='home-box'></div>
         <div className='home-buttons'>
-          <Link to='/HighScores' className='btn'>
-            HIGH SCORES
-          </Link>
-          <Link to='/Game' className='btn-dark'>
+          <div className='home-mobile-image'></div>
+          <Link to='/Game' className='start-game-btn btn-dark'>
             START GAME
           </Link>
+          <Link to='/HighScores' className='btn high-scores-btn'>
+            HIGH SCORES
+          </Link>
         </div>
+        <div className='home-mobile-box'></div>
       </div>
     </div>
   );
