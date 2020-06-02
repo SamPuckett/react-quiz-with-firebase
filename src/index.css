@@ -564,4 +564,130 @@ input::placeholder {
     margin-bottom: -5rem;
     align-self: flex-end;
   }
+
+  /* GAME PAGE */
+
+  .game-container {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    flex-direction: column-reverse;
+    padding: 4rem 3rem 3rem 3rem;
+    justify-content: space-around;
+    /* background-image: url(./images/game-mobile.png); */
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #hud {
+    width: 100%;
+  }
+
+  .hud-prefix {
+    margin-bottom: 0;
+  }
+
+  .hud-main-text {
+    margin-top: 0.5rem;
+  }
+
+  #progressBar {
+    margin-top: 1rem;
+    width: 24rem;
+  }
+
+  .game-top {
+    height: 80%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .game-questions-container {
+    width: 100%;
+  }
+
+  .game-questions {
+    padding: 4rem;
+  }
+
+  .game-choice-container {
+    margin-top: 1rem;
+  }
+
+  .choice-container {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    height: 5rem;
+    background-color: white;
+  }
+
+  .choice-prefix {
+    font-size: 2.3rem;
+    color: black;
+    margin: 0 0.5rem 0 2rem;
+    padding: 0;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .choice-text {
+    display: flex;
+    justify-content: flex-start;
+    justify-self: center;
+    justify-items: center;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    color: black;
+    margin: 0 0 0 0;
+    -webkit-text-stroke: unset;
+    text-stroke: unset;
+  }
+
+  .choice-text:hover {
+    color: black;
+    stroke: none;
+    -webkit-text-stroke: unset;
+    text-stroke: unset;
+  }
+
+  .correct {
+    background-color: green;
+  }
+
+  .incorrect {
+    background-color: red;
+  }
+
+  .save-score-container {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .save-score-form-text {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
 }
