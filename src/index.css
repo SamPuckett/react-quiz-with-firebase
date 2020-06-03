@@ -486,6 +486,7 @@ input::placeholder {
     white-space: nowrap;
     overflow: hidden;
     line-height: 0.8;
+    text-shadow: none;
   }
 
   a.btn {
