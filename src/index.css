@@ -690,4 +690,45 @@ input::placeholder {
     align-self: center;
     justify-self: center;
   }
+
+  /* HIGH SCORES PAGE */
+
+  .high-scores-container {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    flex-direction: column-reverse;
+    padding: 4rem 3rem 3rem 3rem;
+    justify-content: space-around;
+    /* background-image: url(./images/game-mobile.png); */
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #highScoresList {
+    width: 100%;
+  }
+
+  .high-score {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .high-score-place {
+    font-size: 5rem;
+  }
+
+  .high-score-name {
+    font-size: 5rem;
+    margin-right: auto;
+  }
+
+  .high-score-score {
+    font-size: 5rem;
+  }
 }
