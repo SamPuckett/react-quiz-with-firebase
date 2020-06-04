@@ -35,7 +35,15 @@ const Question = ({ changeQuestion, question }) => {
           >
             <h2 className='choice-prefix'>{`0${index + 1}.`}</h2>
             <h2
-              className='choice-text'
+              className={
+                choice.length >= 45
+                  ? ' choice-text extremely-long-choice-text'
+                  : choice.length >= 30
+                  ? ' choice-text super-long-choice-text'
+                  : choice.length >= 20
+                  ? ' choice-text long-choice-text'
+                  : 'choice-text'
+              }
               dangerouslySetInnerHTML={{ __html: choice }}
             ></h2>
           </div>
@@ -43,7 +51,15 @@ const Question = ({ changeQuestion, question }) => {
       </div>
       <div className='game-questions-container'>
         <h2
-          className='game-questions'
+          className={
+            question.question.length >= 280
+              ? 'game-questions extremely-long-question-text'
+              : question.question.length >= 200
+              ? 'game-questions super-long-question-text'
+              : question.question.length >= 140
+              ? 'game-questions long-question-text'
+              : 'game-questions'
+          }
           dangerouslySetInnerHTML={{ __html: question.question }}
         ></h2>
       </div>
