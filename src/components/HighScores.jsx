@@ -3,6 +3,7 @@ import { useFirebase } from './Firebase/FirebaseContext';
 
 import SamWatermark from './SamWatermark';
 import MVGQ from './MVGQ';
+import FullScreenLoader from './FullScreenLoader';
 
 const HighScores = () => {
   const firebase = useFirebase();
@@ -36,7 +37,7 @@ const HighScores = () => {
     <div className='high-scores-container'>
       <MVGQ />
       <SamWatermark />
-      {loading && <div id='loader' />}
+      {loading && <FullScreenLoader />}
       {!loading && (
         <>
           {/* <h1>HIGH SCORES</h1> */}

@@ -6,6 +6,7 @@ import HUD from './HUD';
 import SaveScoreForm from './SaveScoreForm';
 import SamWatermark from './SamWatermark';
 import MVGQ from './MVGQ';
+import FullScreenLoader from './FullScreenLoader';
 
 import { loadQuestions } from '../helpers/QuestionsHelper';
 
@@ -70,7 +71,7 @@ const Game = () => {
     <div className='game-container'>
       <MVGQ />
       <SamWatermark />
-      {loading && !done && <div id='loader'></div>}
+      {loading && !done && <FullScreenLoader />}
       {!done && !loading && currentQuestion && (
         <>
           <Question
