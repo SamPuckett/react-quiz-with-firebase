@@ -598,6 +598,11 @@ input::placeholder {
     box-sizing: border-box;
   }
 
+  .post-btn {
+    font-size: 1.8rem !important;
+    padding: 2rem 4rem !important;
+  }
+
   .title {
     font-size: 1.5rem;
     top: 1%;

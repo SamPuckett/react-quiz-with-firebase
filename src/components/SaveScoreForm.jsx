@@ -38,11 +38,15 @@ const SaveScoreForm = ({ score = 0, scoreSaved }) => {
           value={username}
           onChange={onUsernameChange}
         />
-        <button type='submit' className='btn-dark' disabled={!username}>
+        <button
+          type='submit'
+          className='btn-dark post-btn'
+          disabled={!username}
+        >
           SAVE
         </button>
       </form>
-      <Link to='/' className='btn'>
+      <Link to='/' className='btn post-btn'>
         GO HOME
       </Link>
     </div>
