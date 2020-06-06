@@ -3,12 +3,16 @@ import { Link } from 'react-router-dom';
 
 import SamWatermark from './SamWatermark';
 import MVGQ from './MVGQ';
+import MobileBackground from './Backgrounds/MobileBackground';
+import DesktopBackground from './Backgrounds/DesktopBackground';
 
 const Home = () => {
   return (
     <div className='home-container'>
       <MVGQ />
       <SamWatermark />
+      <MobileBackground />
+      <DesktopBackground />
       <div className='home-title'>
         <h1>
           MEGA VIDEO
@@ -18,7 +22,6 @@ const Home = () => {
       </div>
       <div className='home-button-column'>
         <div className='home-buttons'>
-          <div className='home-mobile-image'></div>
           <Link to='/Game' className='start-game-btn btn-dark'>
             START GAME
           </Link>

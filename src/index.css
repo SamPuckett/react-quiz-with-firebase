@@ -74,11 +74,47 @@ h2 {
   text-decoration: none;
 }
 
+.background-mobile-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background-mobile {
+  /* display: none; */
+  justify-self: center;
+  align-self: center;
+  height: 150vw;
+  translate: -25% 25%;
+}
+
+.background-desktop-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background-desktop {
+  justify-self: center;
+  align-self: center;
+  height: 80vw;
+  /* translate: -20% 25%; */
+}
+
 /* HOME PAGE */
 
 .home-container {
   background-position: 50%;
-  background-image: url('https://res.cloudinary.com/dnrbgmcm4/image/upload/c_scale,w_2000/v1590984175/1_rxpe4i.png');
+  /* background-image: url('https://res.cloudinary.com/dnrbgmcm4/image/upload/c_scale,w_2000/v1590984175/1_rxpe4i.png'); */
   background-repeat: no-repeat;
   background-size: cover;
   /* background-color: var(--red1); */
@@ -613,6 +649,25 @@ input::placeholder {
     top: 1%;
   }
 
+  /* Backgrounds */
+
+  .background-mobile-container {
+    border: 1px solid red;
+    /* DELETE ABOVE AFTER DEBUGGING */
+    display: flex;
+  }
+
+  .background-mobile {
+  }
+
+  .background-desktop-container {
+    display: none;
+  }
+
+  .background-desktop {
+    display: none;
+  }
+
   /* HOME PAGE */
 
   .home-container {
@@ -637,19 +692,6 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     width: 100%;
-  }
-
-  .home-mobile-image {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-image: url('https://res.cloudinary.com/dnrbgmcm4/image/upload/c_scale,w_2000/v1590945663/Switch_Splatoon2_char_06__1_-min_mksin4.png');
-    background-repeat: no-repeat;
-    background-size: 175%;
-    background-position: 50% 180%;
-    z-index: -1;
   }
 
   .home-mobile-box {
@@ -919,5 +961,73 @@ input::placeholder {
     font-size: 1.5rem;
     white-space: pre-wrap;
     overflow: auto;
+  }
+}
+
+/* ###################### */
+/* # IPAD MEDIA QUERIES # */
+/* ###################### */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* ########## */
+  /* # GLOBAL # */
+  /* ########## */
+
+  * {
+    /* border: 1px solid red; */
+  }
+
+  h1 {
+    font-size: 5rem;
+    white-space: pre;
+    overflow: auto;
+  }
+
+  /* BACKGROUNDS */
+
+  .background-mobile-container {
+    display: none;
+  }
+
+  .background-mobile {
+    display: none;
+  }
+
+  .background-desktop-container {
+    display: flex;
+  }
+
+  .background-desktop {
+    justify-self: center;
+    align-self: center;
+    height: 120vw;
+    translate: -10% 0;
+  }
+
+  /* ######## */
+  /* # Home # */
+  /* ######## */
+
+  .home-container {
+    padding: 2rem 2rem;
+    align-items: center;
+  }
+
+  /* .home-title {
+    margin-right: 5rem;
+  }
+
+  .home-button-column {
+    margin-left: 5rem;
+  } */
+
+  .start-game-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .high-scores-btn {
+    margin-top: 1rem;
+    display: inline-block;
   }
 }
