@@ -89,7 +89,8 @@ h2 {
   justify-self: center;
   align-self: center;
   height: 150vw;
-  translate: -25% 25%;
+  transform: translate(-25%, 25%);
+  /* translate: -25% 25%; */
 }
 
 .background-desktop-container {
