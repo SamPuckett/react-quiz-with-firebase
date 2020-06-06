@@ -652,8 +652,6 @@ input::placeholder {
   /* Backgrounds */
 
   .background-mobile-container {
-    border: 1px solid red;
-    /* DELETE ABOVE AFTER DEBUGGING */
     display: flex;
   }
 
