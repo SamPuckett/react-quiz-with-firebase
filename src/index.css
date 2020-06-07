@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url('https://use.typekit.net/saa3zjh.css');
 
 :root {
@@ -10,6 +17,7 @@
 }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: futura-pt, sans-serif;
   font-weight: 400;
@@ -86,14 +94,21 @@ h2 {
 
 .background-mobile {
   /* display: none; */
+  -ms-grid-column-align: center;
   justify-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   height: 150vw;
+  -webkit-transform: translate(-25%, 25%);
+  -ms-transform: translate(-25%, 25%);
   transform: translate(-25%, 25%);
   /* translate: -25% 25%; */
 }
 
 .background-desktop-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   top: 0;
@@ -105,7 +120,10 @@ h2 {
 }
 
 .background-desktop {
+  -ms-grid-column-align: center;
   justify-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   height: 80vw;
   /* translate: -20% 25%; */
@@ -121,18 +139,34 @@ h2 {
   /* background-color: var(--red1); */
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
   padding: 2.5rem 12rem;
 }
 
 .home-button-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
 }
 
@@ -156,18 +190,34 @@ h2 {
   background-color: var(--red1);
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
   padding: 0;
 }
 
 .game-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   height: 60vh;
   width: 100%;
@@ -176,15 +226,29 @@ h2 {
 .game-choice-container {
   min-width: 55vw;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   /* padding: 0 1rem 0 0; */
 }
 
 .choice-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0;
   width: 100%;
@@ -206,9 +270,15 @@ h2 {
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 1px var(--white);
   text-stroke: 4px var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -ms-flex-item-align: center;
   align-self: center;
   font-size: 4rem;
   padding: 0 1rem 0 1rem;
@@ -224,8 +294,14 @@ h2 {
 }
 
 .game-questions-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: var(--white);
   width: 35vw;
@@ -254,10 +330,19 @@ h2 {
 .container {
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
   /* padding: 2rem; */
@@ -284,14 +369,24 @@ h2 {
 
 .btn:hover {
   cursor: pointer;
+  -webkit-box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
   box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  -webkit-transform: translateY(-0.1rem);
+  -ms-transform: translateY(-0.1rem);
   transform: translateY(-0.1rem);
+  -webkit-transition: -webkit-transform 150ms;
+  transition: -webkit-transform 150ms;
+  -o-transition: transform 150ms;
   transition: transform 150ms;
+  transition: transform 150ms, -webkit-transform 150ms;
 }
 
 .btn[disabled]:hover {
   cursor: not-allowed;
+  -webkit-box-shadow: none;
   box-shadow: none;
+  -webkit-transform: none;
+  -ms-transform: none;
   transform: none;
 }
 
@@ -312,16 +407,26 @@ h2 {
 
 .btn-dark:hover {
   cursor: pointer;
+  -webkit-box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
   box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  -webkit-transform: translateY(-0.1rem);
+  -ms-transform: translateY(-0.1rem);
   transform: translateY(-0.1rem);
+  -webkit-transition: -webkit-transform 150ms;
+  transition: -webkit-transform 150ms;
+  -o-transition: transform 150ms;
   transition: transform 150ms;
+  transition: transform 150ms, -webkit-transform 150ms;
 }
 
 .btn-dark[disabled] {
   background-color: rgba(108, 68, 208, 0.66);
   color: rgba(256, 256, 256, 0.66);
   cursor: not-allowed;
+  -webkit-box-shadow: none;
   box-shadow: none;
+  -webkit-transform: none;
+  -ms-transform: none;
   transform: none;
   border: none;
 }
@@ -330,7 +435,10 @@ h2 {
   background-color: rgba(108, 68, 208, 0.66);
   color: rgba(256, 256, 256, 0.66);
   cursor: not-allowed;
+  -webkit-box-shadow: none;
   box-shadow: none;
+  -webkit-transform: none;
+  -ms-transform: none;
   transform: none;
   border: none;
 }
@@ -338,8 +446,15 @@ h2 {
 /* FORMS */
 form {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -352,6 +467,22 @@ input {
   /* box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5); */
 }
 
+input::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+input::-moz-placeholder {
+  color: #aaa;
+}
+
+input:-ms-input-placeholder {
+  color: #aaa;
+}
+
+input::-ms-input-placeholder {
+  color: #aaa;
+}
+
 input::placeholder {
   color: #aaa;
 }
@@ -361,7 +492,11 @@ input::placeholder {
 #hud {
   margin: 1rem 0 0 0;
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -402,8 +537,14 @@ input::placeholder {
 .fullscreen-loader-container {
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -413,6 +554,7 @@ input::placeholder {
   height: 40px;
   position: relative;
   -webkit-transform: rotateZ(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotateZ(45deg);
 }
 
@@ -441,14 +583,17 @@ input::placeholder {
 }
 .sk-folding-cube .sk-cube2 {
   -webkit-transform: scale(1.1) rotateZ(90deg);
+  -ms-transform: scale(1.1) rotate(90deg);
   transform: scale(1.1) rotateZ(90deg);
 }
 .sk-folding-cube .sk-cube3 {
   -webkit-transform: scale(1.1) rotateZ(180deg);
+  -ms-transform: scale(1.1) rotate(180deg);
   transform: scale(1.1) rotateZ(180deg);
 }
 .sk-folding-cube .sk-cube4 {
   -webkit-transform: scale(1.1) rotateZ(270deg);
+  -ms-transform: scale(1.1) rotate(270deg);
   transform: scale(1.1) rotateZ(270deg);
 }
 .sk-folding-cube .sk-cube2:before {
@@ -523,10 +668,19 @@ input::placeholder {
   background-color: var(--red1);
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
   padding: 0;
@@ -542,9 +696,18 @@ input::placeholder {
   background-color: var(--red1);
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
@@ -562,8 +725,15 @@ input::placeholder {
   font-size: 8rem;
   line-height: 0.8;
   margin: 0 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   text-align: center;
   margin: 0 auto;
@@ -626,12 +796,14 @@ input::placeholder {
   a.btn {
     font-size: 1.5rem;
     padding: 1.5rem 3rem;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
 
   a.btn-dark {
     font-size: 1.5rem;
     padding: 1.5rem 3rem;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
 
@@ -653,6 +825,8 @@ input::placeholder {
   /* Backgrounds */
 
   .background-mobile-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
@@ -670,8 +844,13 @@ input::placeholder {
   /* HOME PAGE */
 
   .home-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     padding: 3rem 3rem 0 3rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     background-image: none;
     height: 100vh;
@@ -683,12 +862,19 @@ input::placeholder {
   }
 
   .home-title {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     margin: 2rem 0 0 0;
   }
 
   .home-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
   }
@@ -701,26 +887,40 @@ input::placeholder {
   }
 
   .start-game-btn {
+    -ms-flex-item-align: start;
     align-self: flex-start;
   }
 
   .high-scores-btn {
     margin-bottom: -5rem;
+    -ms-flex-item-align: end;
     align-self: flex-end;
   }
 
   /* GAME PAGE */
 
   .game-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     justify-self: center;
     justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-line-pack: center;
     align-content: center;
+    -ms-flex-item-align: center;
     align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     padding: 4rem 3rem 3rem 3rem;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     /* background-image: url(./images/game-mobile.png); */
     height: 100vh;
@@ -747,7 +947,12 @@ input::placeholder {
   .game-top {
     height: 80%;
     margin-top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
 
@@ -776,12 +981,20 @@ input::placeholder {
   }
 
   .choice-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     justify-self: center;
     justify-items: center;
+    -ms-flex-item-align: center;
     align-self: center;
+    -ms-flex-line-pack: center;
     align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-top: 1rem;
     height: 5rem;
@@ -803,12 +1016,20 @@ input::placeholder {
   }
 
   .choice-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
     justify-self: center;
     justify-items: center;
+    -ms-flex-item-align: center;
     align-self: center;
+    -ms-flex-line-pack: center;
     align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: initial;
     font-size: 2.3rem;
@@ -846,19 +1067,30 @@ input::placeholder {
   }
 
   .save-score-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     justify-self: center;
     justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-line-pack: center;
     align-content: center;
+    -ms-flex-item-align: center;
     align-self: center;
     margin: 0;
     padding: 0;
   }
 
   .save-score-form-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-item-align: center;
     align-self: center;
     justify-self: center;
   }
@@ -866,15 +1098,27 @@ input::placeholder {
   /* HIGH SCORES PAGE */
 
   .high-scores-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     justify-self: center;
     justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-line-pack: center;
     align-content: center;
+    -ms-flex-item-align: center;
     align-self: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     padding: 4rem 3rem 3rem 3rem;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     /* background-image: url(./images/game-mobile.png); */
     height: 100vh;
@@ -886,8 +1130,15 @@ input::placeholder {
   }
 
   .high-score {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
@@ -993,11 +1244,16 @@ input::placeholder {
   }
 
   .background-desktop-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
   .background-desktop {
+    -ms-grid-column-align: center;
     justify-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     height: 120vw;
     translate: -10% 0;
@@ -1009,6 +1265,8 @@ input::placeholder {
 
   .home-container {
     padding: 2rem 2rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
