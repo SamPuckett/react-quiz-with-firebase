@@ -14,11 +14,7 @@ const Home = () => {
       <MobileBackground />
       <DesktopBackground />
       <div className='home-title'>
-        <h1>
-          MEGA VIDEO
-          <br />
-          GAME QUIZ
-        </h1>
+        <h1>MEGA VIDEO GAME QUIZ</h1>
       </div>
       <div className='home-button-column'>
         <div className='home-buttons'>

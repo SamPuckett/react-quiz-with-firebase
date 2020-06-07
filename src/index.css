@@ -19,8 +19,8 @@
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: futura-pt, sans-serif;
-  font-weight: 400;
+  font-family: termina, sans-serif;
+  font-weight: normal;
   font-style: normal;
   margin: 0;
   padding: 0;
@@ -42,7 +42,7 @@ h1 {
   font-size: 10rem;
   color: var(--white);
   margin: 0;
-  font-family: futura-pt-bold, sans-serif;
+  font-family: termina, sans-serif;
   font-weight: 700;
   font-style: normal;
   line-height: 1;
@@ -52,8 +52,8 @@ h1 {
 h2 {
   font-size: 4.2rem;
   margin: 0;
+  font-family: termina, sans-serif;
   font-weight: 700;
-  font-family: futura-pt-bold, sans-serif;
   font-style: normal;
 }
 
@@ -155,6 +155,13 @@ h2 {
   align-items: center;
   margin: 0 auto;
   padding: 2.5rem 12rem;
+}
+
+.home-title {
+  display: flex;
+  align-self: center;
+  justify-self: flex-start;
+  text-align: initial;
 }
 
 .home-button-column {
@@ -354,7 +361,7 @@ h2 {
 
 /* BUTTONS */
 .btn {
-  font-family: futura-pt-bold, sans-serif;
+  font-family: termina, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 1.8rem;
@@ -391,7 +398,7 @@ h2 {
 }
 
 .btn-dark {
-  font-family: futura-pt-bold, sans-serif;
+  font-family: termina, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 1.8rem;
@@ -441,6 +448,19 @@ h2 {
   -ms-transform: none;
   transform: none;
   border: none;
+}
+
+.start-game-btn {
+  display: inline-block;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.high-scores-btn {
+  display: inline-block;
+  margin-bottom: -5rem;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
 }
 
 /* FORMS */
@@ -786,11 +806,10 @@ input::placeholder {
   }
 
   h1 {
-    font-size: 5.5rem;
-    white-space: nowrap;
-    overflow: hidden;
+    font-size: 4rem;
     line-height: 0.8;
     text-shadow: none;
+    text-align: center;
   }
 
   a.btn {
@@ -862,10 +881,11 @@ input::placeholder {
   }
 
   .home-title {
+    padding: 1vh 0 1vh 0;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
-    margin: 2rem 0 0 0;
+    margin: 1rem 0 1rem 0;
   }
 
   .home-buttons {
@@ -887,11 +907,13 @@ input::placeholder {
   }
 
   .start-game-btn {
+    display: inline-block;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
 
   .high-scores-btn {
+    display: inline-block;
     margin-bottom: -5rem;
     -ms-flex-item-align: end;
     align-self: flex-end;
