@@ -36,11 +36,11 @@ const Question = ({ changeQuestion, question }) => {
             <h2 className='choice-prefix'>{`0${index + 1}.`}</h2>
             <h2
               className={
-                choice.length >= 45
+                choice.length >= 35
                   ? ' choice-text extremely-long-choice-text'
-                  : choice.length >= 30
+                  : choice.length >= 27
                   ? ' choice-text super-long-choice-text'
-                  : choice.length >= 20
+                  : choice.length >= 15
                   ? ' choice-text long-choice-text'
                   : 'choice-text'
               }
@@ -52,11 +52,11 @@ const Question = ({ changeQuestion, question }) => {
       <div className='game-questions-container'>
         <h2
           className={
-            question.question.length >= 280
+            question.question.length >= 150
               ? 'game-questions extremely-long-question-text'
-              : question.question.length >= 200
+              : question.question.length >= 100
               ? 'game-questions super-long-question-text'
-              : question.question.length >= 140
+              : question.question.length >= 10
               ? 'game-questions long-question-text'
               : 'game-questions'
           }
