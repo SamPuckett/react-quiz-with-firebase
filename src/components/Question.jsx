@@ -4,6 +4,7 @@ const Question = ({ changeQuestion, question }) => {
   const [classToApply, setClassToApply] = useState('');
   const [selectedAnswer, setSelectedAnswer] = useState(-1);
   const [answering, setAnswering] = useState(false);
+  const [choiceArray] = useState(['A', 'B', 'C', 'D']);
 
   const checkAnswer = (selectedAnswer) => {
     if (answering) return;
@@ -33,7 +34,7 @@ const Question = ({ changeQuestion, question }) => {
             key={index}
             onClick={() => checkAnswer(index)}
           >
-            <h2 className='choice-prefix'>{`0${index + 1}.`}</h2>
+            <h2 className='choice-prefix'>{`${choiceArray[index]}.`}</h2>
             <h2
               className={
                 choice.length >= 35
